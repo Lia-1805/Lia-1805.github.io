@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;400;500;700&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     background-color: #e1b5ff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Roboto Mono', monospace;
+    width: 100vw;
+    height: 100vh;
 }
 
 body::after {
@@ -54,9 +60,24 @@ ul {
     width: 100%;
 }
 .column{
-    padding: 25px 45px;
+    padding: 25px 0;
     flex: 50%;
     width: 50%;
+}
+.column:nth-child(1){
+    padding-left: 45px;
+    padding-right: 25px;
+}
+.column:nth-child(2){
+    padding-right: 45px;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.column:nth-child(2) img {
+    width: 269px;
+    height: 300px;
 }
 h1{
     padding: 0;
@@ -79,6 +100,10 @@ q{
     font-weight: bold;
     font-style: italic;
 }
+q.prettypretty{
+    margin-top: 7px;
+}
+
 .icons ul li{
     display: inline-block;
     margin: 0;
@@ -95,4 +120,12 @@ q{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.girlbike{
+    height: 82px !important;
+}
+.copyright{
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 16px;
 }
