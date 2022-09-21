@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@100;200;400;500;700&display=swap');
 
 *{
     margin: 0;
@@ -28,6 +28,7 @@ body::after {
     mix-blend-mode: overlay;
     pointer-events: none;
     opacity: 0.2;
+    z-index: 1;
 }
 
 .quadradoprincipal {
@@ -128,4 +129,49 @@ q.prettypretty{
     font-size: 14px;
     font-style: italic;
     margin-top: 16px;
+}
+.loading{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #e1b5ff;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Press Start 2P', cursive;
+    flex-direction: column;
+}
+.loading.disable{
+    display: none;
+}
+.loading span{
+    font-size: 28px;
+}
+.retangle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 290px;
+    height: 30px;
+    background-color: black;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #000;
+    border-image-slice: 4;
+    border-image-width: 2;
+    border-image-outset: 0;
+    border-image-source: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><path d='M2 2h2v2H2zM4 0h2v2H4zM10 4h2v2h-2zM0 4h2v2H0zM6 0h2v2H6zM8 2h2v2H8zM8 8h2v2H8zM6 10h2v2H6zM0 6h2v2H0zM10 6h2v2h-2zM4 10h2v2H4zM2 8h2v2H2z' fill='%23000' /></svg>")
+}
+.retangle div{
+    height: 100%;
+    width: calc((93%/6) - 6px);
+    margin: 0 3px;
+}
+.retangle div.active{
+    background-color: white;
 }
